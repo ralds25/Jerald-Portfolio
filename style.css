@@ -36,6 +36,8 @@ section {
 /* Header section code */
 
 .header {
+    margin-right: 20px;
+    margin-left: 20px;
     position: fixed;
     width: 100%;
     top: 0;
