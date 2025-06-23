@@ -1,6 +1,5 @@
 * {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -8,6 +7,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
 }
 
 :root {
@@ -29,16 +29,13 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 10% 2rem;
+    padding: 10rem 9% 2rem;
 }
 
 
 /* Header section code */
 
 .header {
-    margin-right: 20px;
-    margin-left: 20px;
-    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -53,6 +50,7 @@ section {
 }
 
 .logo {
+    align-items: center;
     font-size: 3rem;
     color: var(--bg-color);
     font-weight: 700;
@@ -89,7 +87,6 @@ section {
     font-size: 3.5rem;
     color: var(--bg-color);
     cursor: pointer;
-    display: none;
 }
 
     /* Home Section Code */
@@ -257,7 +254,7 @@ section {
 /*Services Section */
 
 .services h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .services-container {
@@ -265,23 +262,21 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20rem;
-    display:inline;
-    justify-content: center;
-    align-items: start;
+    gap: 2rem;
 
 }
 
 .services-container .services-box {
-    flex: 1 1 30rem;
+    width: 50%;
     background: var(--snd-bg-color);
-    padding: 6rem 2rem 6rem;
+    padding: 50px;
     border-radius: 2rem;
     text-align: center;
     border: 0.3rem solid white;
     transition: 0.3 ease;
     margin-top: 2rem;
-
+    min-height: 100%;
+    float: right;
     
 }
 
@@ -339,13 +334,15 @@ section {
 }
 
 .expirience-container .expirience-box {
-    flex: 1 1 30rem;
+    width: 25%;
     background: rgb(194, 193, 193);
-    padding: 6rem 2rem 6rem;
+    padding: 25px;
     border-radius: 2rem;
     text-align: center;
     border: 0.3rem solid var(--bg-color);
     transition: 0.3 ease;
+    min-height: 50%;
+    float: right;
 }
 
 .expirience-container .expirience:hover {
@@ -385,17 +382,20 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 .skills-container .skills-box {
-    flex: 1 1 30rem;
+    width: 25%;
+    flex: 50rem;
+    padding: 50px;
     background: transparent;
     padding: 6rem 2rem 6rem;
     border-radius: 2rem;
     text-align: center;
     transition: 0.3 ease;
+    min-height: 50%;
+    float: right;
 }
-
 .skills-container .skills:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
@@ -521,6 +521,12 @@ section {
     margin-bottom: 3rem;
 }
 
+.contact form .input-box {
+    display:inline;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
 
 .contact form .input-box input,
 .contact form textarea {
@@ -627,21 +633,19 @@ section {
 
 .navbar {
     position: absolute;
-    align-items: flex-start;
-    gap: 1.7rem !important;
-    width: 250px;
-    height: 100vh;
-    top: 100%;
+    top: 100;
     right: -100%;
-    padding: 5rem, 1.5rem;
+    width: 255px;
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
+    background: var(--main-color);
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     }
 
 .navbar a {
-    display: flex;
+    display: block;
     padding: 17px;
     font-size: 22px;
 }
@@ -681,7 +685,6 @@ section {
 
 @media (max-width: 617px){
     .home-img {
-        width: 70vw;
         margin-top: 8rem;
     }
     .about-img {
