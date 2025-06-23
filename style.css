@@ -29,13 +29,16 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 10% 2rem;
 }
 
 
 /* Header section code */
 
 .header {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -50,7 +53,6 @@ section {
 }
 
 .logo {
-    align-items: center;
     font-size: 3rem;
     color: var(--bg-color);
     font-weight: 700;
@@ -87,6 +89,7 @@ section {
     font-size: 3.5rem;
     color: var(--bg-color);
     cursor: pointer;
+    display: none;
 }
 
     /* Home Section Code */
@@ -254,7 +257,7 @@ section {
 /*Services Section */
 
 .services h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .services-container {
@@ -262,7 +265,10 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 20rem;
+    display:inline;
+    justify-content: center;
+    align-items: start;
 
 }
 
@@ -277,6 +283,7 @@ section {
     margin-top: 2rem;
     min-height: 100%;
     float: right;
+
     
 }
 
@@ -334,15 +341,13 @@ section {
 }
 
 .expirience-container .expirience-box {
-    width: 25%;
+    flex: 1 1 30rem;
     background: rgb(194, 193, 193);
-    padding: 25px;
+    padding: 6rem 2rem 6rem;
     border-radius: 2rem;
     text-align: center;
     border: 0.3rem solid var(--bg-color);
     transition: 0.3 ease;
-    min-height: 50%;
-    float: right;
 }
 
 .expirience-container .expirience:hover {
@@ -396,6 +401,7 @@ section {
     min-height: 50%;
     float: right;
 }
+
 .skills-container .skills:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
@@ -521,12 +527,6 @@ section {
     margin-bottom: 3rem;
 }
 
-.contact form .input-box {
-    display:inline;
-    justify-content: center;
-    align-items: start;
-    gap: 20px;
-}
 
 .contact form .input-box input,
 .contact form textarea {
@@ -633,19 +633,21 @@ section {
 
 .navbar {
     position: absolute;
-    top: 100;
+    align-items: flex-start;
+    gap: 1.7rem !important;
+    width: 250px;
+    height: 100vh;
+    top: 100%;
     right: -100%;
-    width: 255px;
-    min-height: 100vh;
-    display: flex;
+    padding: 5rem, 1.5rem;
     flex-direction: column;
-    background: var(--main-color);
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     }
 
 .navbar a {
-    display: block;
+    display: flex;
     padding: 17px;
     font-size: 22px;
 }
@@ -685,6 +687,7 @@ section {
 
 @media (max-width: 617px){
     .home-img {
+        width: 70vw;
         margin-top: 8rem;
     }
     .about-img {
