@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    border: none;
-    outline: none;
     scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
@@ -36,6 +34,8 @@ section {
 /* Header section code */
 
 .header {
+
+    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -87,14 +87,17 @@ section {
     font-size: 3.5rem;
     color: var(--bg-color);
     cursor: pointer;
+    display: none;
 }
 
     /* Home Section Code */
 
     .home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
 
     }
 
@@ -128,7 +131,15 @@ section {
     }
 
     .home-content {
-        margin-left: 5rem;
+    position: relative;
+    max-width: 1760px;
+     width: 100%;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     }
@@ -267,17 +278,22 @@ section {
 }
 
 .services-container .services-box {
-    width: 50%;
+    max-width: 25%;
     background: var(--snd-bg-color);
-    padding: 50px;
+    padding: 5px;
     border-radius: 2rem;
     text-align: center;
     border: 0.3rem solid white;
     transition: 0.3 ease;
     margin-top: 2rem;
     min-height: 100%;
-    float: right;
-    
+    align-items: center;
+    word-wrap: break-word;
+    flex-direction: column;
+      box-sizing: border-box;
+  line-height: 1.2;
+display: inline-block;
+
 }
 
 .services-container .services-box:hover {
@@ -299,7 +315,7 @@ section {
 }
 
 .services-box i {
-    font-size: 8rem;
+    font-size: 2rem;
     color: white;
     border-width: 5px;
     border-style: groove;
@@ -309,12 +325,12 @@ section {
 }
 
 .services-box h3 {
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgb(0, 255, 0);
 }
 
 .services-box p {
-    font-size:  2.5rem;
+    font-size:  1.5rem;
     margin: 1rem 0;
 
 }
@@ -335,14 +351,21 @@ section {
 
 .expirience-container .expirience-box {
     width: 25%;
+    max-width: 25%;
     background: rgb(194, 193, 193);
-    padding: 25px;
+    padding: 10px;
     border-radius: 2rem;
     text-align: center;
     border: 0.3rem solid var(--bg-color);
-    transition: 0.3 ease;
     min-height: 50%;
-    float: right;
+    display: inline-block; 
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;          /* Allow text to break inside */
+          box-sizing: border-box;
+  line-height: 1.2;
+display: inline-block;
+    
 }
 
 .expirience-container .expirience:hover {
